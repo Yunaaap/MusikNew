@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -82,13 +73,10 @@ async def vc(client, message: Message):
     await message.reply_text(f"ᴀᴄᴛɪᴠᴇ ᴄʜᴀᴛs ɪɴғᴏ: {ac_audio}")
 
 
-__MODULE__ = "Acᴛɪᴠᴇ"
-__HELP__ = """
-<b>✧ /ac</b> - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴏɴ ʙᴏᴛ.
+__MODULE__ = "Online"
+__HELP__ = """<blockquote><b><u>Active Commands:</u>
 
-<b>✧ /activevoice</b> - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴀɴᴅ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴏɴ ʙᴏᴛ.
-
-<b>✧ /activevideo</b> - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴏɴ ʙᴏᴛ.
-
-<b>✧ /stats</b> - Cʜᴇᴄᴋ Bᴏᴛs Sᴛᴀᴛs
-"""
+/ac: Displays a list of active voice chats on the bot.
+/activevoice: Displays a list of active voice chats and video calls on the bot.
+/activevideo: Displays a list of active video calls on the bot.
+/stats: Displays the bot's statistics. </b></blockquote>"""
