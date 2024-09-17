@@ -1,11 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
 import re
 import sys
 from os import getenv
@@ -16,20 +8,14 @@ from pyrogram import filters
 load_dotenv()
 
 
-# Get it from my.telegram.org
 
 API_ID = int(getenv("API_ID", ""))
-
-API_HASH = getenv("API_HASH")
-
-
-## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+API_HASH = getenv("API_HASH", "")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-
+MONGO_DB_URI = getenv("MONGO_DB_URI", "")
 
 CLEANMODE_DELETE_MINS = int(
     getenv("CLEANMODE_MINS", "5")
