@@ -50,7 +50,7 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("TheYukki")
+                await self.one.join_chat("StreamSupport_Id")
             except:
                 pass
             assistants.append(1)
@@ -74,7 +74,7 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("TheYukki")
+                await self.two.join_chat("StreamSupport_Id")
             except:
                 pass
             assistants.append(2)
