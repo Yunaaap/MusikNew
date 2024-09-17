@@ -1,13 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
-
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -98,3 +88,11 @@ async def authorized(client, message: Message, _):
         else:
             text = f"{text} {msg}"
             return await m.edit(text)
+
+__MODULE__ = "Private"
+__HELP__ = """<blockquote><b>
+🤖 Private Bot Function:
+
+/authorize [CHAT_ID]: Allows a chat to use your bot.
+/unauthorize [CHAT_ID]: Disallows a chat from using your bot.
+/authorized: Checks all allowed chats of your bot.</b></blockquote>"""
