@@ -1085,18 +1085,13 @@ async def del_back_playlist(client, CallbackQuery, _):
         _["playlist_7"].format(count), reply_markup=keyboard
     )
 
+__MODULE__ = "Album"
+__HELP__ = """<blockquote><b><u>Playlist Commands:</u>
 
-__MODULE__ = "P-ʟɪsᴛ"
-__HELP__ = """
-<b>★ /playlist</b> - Cʜᴇᴄᴋ Yᴏᴜʀ Sᴀᴠᴇᴅ Pʟᴀʏʟɪsᴛ Oɴ Sᴇʀᴠᴇʀs.
-
-<b>★ /delplaylist</b> - Dᴇʟᴇᴛᴇ ᴀɴʏ sᴀᴠᴇᴅ ᴍᴜsɪᴄ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ.
-
-<b>★ /play</b> - Sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ Yᴏᴜʀ Sᴀᴠᴇᴅ Pʟᴀʏʟɪsᴛ ғʀᴏᴍ Sᴇʀᴠᴇʀs.
-
-<b>★ /playplaylist</b> - Sᴛᴀʀᴛ ᴅɪʀᴇᴄᴛʟʏ ᴘʟᴀʏɪɴɢ Yᴏᴜʀ Sᴀᴠᴇᴅ Pʟᴀʏʟɪsᴛ ғʀᴏᴍ Sᴇʀᴠᴇʀs [ᴏɴʟʏ ᴀᴜᴅɪᴏ ɴᴏ ᴠɪᴅᴇᴏ].
-
-<b>★ /vplayplaylist</b> - Sᴛᴀʀᴛ ᴅɪʀᴇᴄᴛʟʏ ᴘʟᴀʏɪɴɢ Yᴏᴜʀ Sᴀᴠᴇᴅ Pʟᴀʏʟɪsᴛ ғʀᴏᴍ Sᴇʀᴠᴇʀs [ ᴀᴜᴅɪᴏ ᴡɪᴛʜ ᴠɪᴅᴇᴏ].
-
-<b>★ /addplaylist</b> - [ʏᴛ-ᴠɪᴅᴇᴏ ʟɪɴᴋ] ᴏʀ [ʏᴛ-ᴘʟᴀʏʟɪsᴛʟɪɴᴋ] ᴏʀ [sᴏɴɢ ɴᴀᴍᴇ] ᴛᴏ ᴀᴅᴅ ɪɴ ʏᴏᴜʀ ʙᴏᴛ ᴘʟᴀʏʟɪsᴛ.
-"""
+/playlist:  Checks your saved playlist on the servers.
+/delplaylist: Deletes any saved music in your playlist.
+/play: Starts playing your saved playlist from the servers.
+/playplaylist: Starts directly playing your saved playlist from the servers (only audio, no video).
+/vplayplaylist: Starts directly playing your saved playlist from the servers (audio with video).
+/addplaylist: Adds a YouTube video link or YouTube playlist link or song name to your bot playlist.
+</b></blockquote>"""
