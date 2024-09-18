@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardButton
 
-from config import OWNER, SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import OWNER_ID, SUPPORT_CHANNEL, SUPPORT_GROUP
 from YukkiMusic import app
 
 
@@ -40,7 +40,7 @@ def private_panel(_):
             InlineKeyboardButton(
                 text="Add Me!", url=f"https://t.me/{app.username}?startgroup=true"
             ),
-            InlineKeyboardButton(text="Owner", user_id=OWNER),
+            InlineKeyboardButton(text="Owner", user_id=OWNER_ID),
         ],
         [
             InlineKeyboardButton(text=_["S_B_8"], callback_data="settings_back_helper"),
