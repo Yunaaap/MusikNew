@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton
 
 from config import OWNER, SUPPORT_CHANNEL, SUPPORT_GROUP
-from KNMusic import app
+from YukkiMusic import app
 
 
 def start_pannel(_):
