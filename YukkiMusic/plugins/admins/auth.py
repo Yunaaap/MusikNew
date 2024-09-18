@@ -151,14 +151,11 @@ async def authusers(client, message: Message, _):
         await message.reply_text(text)
 
 
-__MODULE__ = "Auᴛʜ"
-__HELP__ = """
+__MODULE__ = "User"
+__HELP__ = """<blockquote><b><b><u>Auth Users:</u></b>
+Auth users can use admin commands without admin rights in your chat.
 
-<b>Aᴜᴛʜ Usᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.</b>
-
-<b>✧ /auth</b> [Usᴇʀɴᴀᴍᴇ] - Aᴅᴅ ᴀ ᴜsᴇʀ ᴛᴏ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-
-<b>✧ /unauth</b> [Usᴇʀɴᴀᴍᴇ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-
-<b>✧ /authusers</b> - Cʜᴇᴄᴋ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
+/auth [Username]: Adds a user to the AUTH LIST of the group.
+/unauth [Username]: Removes a user from the AUTH LIST of the group. 
+/authusers: Checks the AUTH LIST of the group..</b></blockquote>
 """
