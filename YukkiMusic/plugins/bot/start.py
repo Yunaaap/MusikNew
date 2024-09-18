@@ -46,9 +46,8 @@ async def start_comm(client, message: Message, _):
                 paginate_modules(0, HELPABLE, "help", close=True)
             )
             if config.START_IMG_URL:
-                return await message.reply_photo(
-                    photo=START_IMG_URL,
-                    caption=_["help_1"],
+                return await message.reply_text(
+                    _["help_1"],
                     reply_markup=keyboard,
                 )
             else:
@@ -206,9 +205,8 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_photo(
-                    photo=config.START_IMG_URL,
-                    caption=_["start_1"].format(app.mention),
+                await message.reply_text(
+                    _["start_1"].format(app.mention),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
@@ -237,9 +235,8 @@ async def testbot(client, message: Message, _):
     uptime = int(time.time() - _boot_)
     chat_id = message.chat.id
     if config.START_IMG_URL:
-        await message.reply_photo(
-            photo=config.START_IMG_URL,
-            caption=_["start_7"].format(app.mention, get_readable_time(uptime)),
+        await message.reply_text(
+            _["start_7"].format(app.mention, get_readable_time(uptime)),
             reply_markup=InlineKeyboardMarkup(out),
         )
     else:
