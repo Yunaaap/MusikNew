@@ -1,12 +1,4 @@
 #
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 import re
 from math import ceil
 from typing import Union
@@ -94,7 +86,7 @@ def paginate_modules(page_n, module_dict, prefix, chat=None, close: bool = False
         pairs.append(
             [
                 EqInlineKeyboardButton(
-                    "ᴄʟᴏsᴇ" if close else "Bᴀᴄᴋ",
+                    "close" if close else "back",
                     callback_data="close" if close else "settingsback_helper",
                 ),
             ]
@@ -174,7 +166,7 @@ async def help_button(client, query):
         module = mod_match.group(1)
         prev_page_num = int(mod_match.group(2))
         text = (
-            f"<b><u>Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ {HELPABLE[module].__MODULE__}:</u></b>\n"
+            f"<b><u>Berikut adalah bantuan untuk  {HELPABLE[module].__MODULE__}:</u></b>\n"
             + HELPABLE[module].__HELP__
         )
 
@@ -182,9 +174,9 @@ async def help_button(client, query):
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ ʙᴀᴄᴋ", callback_data=f"help_back({prev_page_num})"
+                        text="↪️ back", callback_data=f"help_back({prev_page_num})"
                     ),
-                    InlineKeyboardButton(text="🔄 ᴄʟᴏsᴇ", callback_data="close"),
+                    InlineKeyboardButton(text="🔄 close", callback_data="close"),
                 ],
             ]
         )
