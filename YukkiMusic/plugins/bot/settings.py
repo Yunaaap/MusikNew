@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
@@ -503,21 +494,28 @@ async def authusers_mar(client, CallbackQuery, _):
     except MessageNotModified:
         return
 
+__MODULE__ = "Settings"
+__HELP__ = """<blockquote><b>✅<u>Group Settings:</u>
+/settings, /setting: Access settings menu.
 
-"""✅<u>Gʀᴏᴜᴘ Sᴇᴛᴛɪɴɢs:</u>
-/settings - Gᴇᴛ ᴀ ᴄᴏᴍᴘʟᴇᴛᴇ ɢʀᴏᴜᴘ's sᴇᴛᴛɪɴɢs ᴡɪᴛʜ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs
+Features:
+- Modify play modes (Direct, Inline).
+- Change play types (Everyone, Admin).
+- Manage authorized users.
+- Set up voting mechanisms for skips.
+- Supports callback queries for settings adjustments.
 
-🔗 <u>Oᴘᴛɪᴏɴs ɪɴ Sᴇᴛᴛɪɴɢs:</u>
+Commands:
+- /settings
+- /setting
 
-1 Yᴏᴜ ᴄᴀɴ sᴇᴛ Aᴜᴅɪᴏ Qᴜᴀʟɪᴛʏ
-2 Yᴏᴜ ᴄᴀɴ sᴇᴛ Vɪᴅᴇᴏ Qᴜᴀʟɪᴛʏ
-3 **Aᴜᴛʜ Usᴇʀs**:- Yᴏᴜ ᴄᴀɴ ᴄʜᴀɴɢᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴍᴏᴅᴇ ғʀᴏᴍ ʜᴇʀᴇ ᴛᴏ ᴇᴠᴇʀʏᴏɴᴇ ᴏʀ ᴀᴅᴍɪɴs ᴏɴʟʏ.
-4 **Cʟᴇᴀɴ Mᴏᴅᴇ:**ʙᴏᴛ's ᴅᴇʟᴇᴛᴇs ᴛʜᴇ ʙᴏᴛ's ᴍᴇssᴀɢᴇs ᴀғᴛᴇʀ 𝟻 ᴍɪɴs ғʀᴏᴍ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ʀᴇᴍᴀɪɴs ᴄʟᴇᴀɴ ᴀɴᴅ ɢᴏᴏᴅ.
-5 **Cᴏᴍᴍᴀɴᴅ Cʟᴇᴀɴ** : Wʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ, Bᴏᴛ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪᴛs ᴇxᴇᴄᴜᴛᴇᴅ ᴄᴏᴍᴍᴀɴᴅs lɪᴍᴍᴇᴅɪᴀᴛᴇʟʏ.
-       <b><u>Pʟᴀʏ Sᴇᴛᴛɪɴɢs:</></b>
-/playmode - Gᴇᴛ ᴀ ᴄᴏᴍᴘʟᴇᴛᴇ ᴘʟᴀʏ sᴇᴛᴛɪɴɢs ᴘᴀɴᴇʟ ᴡɪᴛʜ ʙᴜᴛᴛᴏɴs ᴡʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ sᴇᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴘʟᴀʏ sᴇᴛᴛɪɴɢs. 
-      <b><u>Oᴘᴛɪᴏɴs ɪɴ Pʟᴀʏᴍᴏᴅᴇ:</u></b>
-1 **Sᴇᴀʀᴄʜ Mᴏᴅᴇ** [Dɪʀᴇᴄᴛ ᴏʀ Iɴʟɪɴᴇ] - Cʜᴀɴɢᴇs ʏᴏᴜʀ sᴇᴀʀᴄʜ ᴍᴏᴅᴇ ᴡʜɪʟᴇ ʏᴏᴜ ɢɪᴠᴇ /playmode
-2 **Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs** [Eᴠᴇʀʏᴏɴᴇ ᴏʀ Aᴅᴍɪɴs] - Iғ ᴇᴠᴇʀʏᴏɴᴇ, ᴀɴʏᴏɴᴇ  ɪɴ ʏᴏᴜ ɢʀᴏᴜᴘ ᴡɪʟʟ ʙᴇ ᴀʙʟᴇ ᴛᴏ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅ (ʟɪᴋᴇ /skip, /stop etc)
-3 **Pʟᴀʏ Tʏᴘᴇ** [Eᴠᴇʀʏᴏɴᴇ ᴏʀ Aᴅᴍɪɴs] - Iғ ᴀᴅᴍɪɴs, ᴏɴʟʏ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
-"""
+Callback Queries:
+- settings_helper: Opens the settings menu.
+- settingsback_helper: Returns to the previous settings menu.
+- SEARCHANSWER, PLAYMODEANSWER, PLAYTYPEANSWER, AUTHANSWER, ANSWERVOMODE: Handles specific settings options.
+- MODECHANGE, CHANNELMODECHANGE, PLAYTYPECHANGE: Changes settings modes.
+- AUTH, AUTHLIST: Manages authorized users.
+- VOMODECHANGE: Changes the voting mode.
+
+Note: The settings are only accessible to authorized users and admins. Some settings may require specific admin rights to change.
+</b></blockquote>"""
