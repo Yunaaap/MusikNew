@@ -1,13 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
-
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
@@ -27,15 +17,15 @@ async def join_watcher(_, message):
             if members.id == app.id:
                 count = await app.get_chat_members_count(chat.id)
                 username = (
-                    message.chat.username if message.chat.username else "ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+                    message.chat.username if message.chat.username else "Private Chat"
                 )
                 msg = (
-                    f"**ᴍᴜsɪᴄ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ #New_Group**\n\n"
-                    f"**ᴄʜᴀᴛ ɴᴀᴍᴇ:** {message.chat.title}\n"
-                    f"**ᴄʜᴀᴛ ɪᴅ:** {message.chat.id}\n"
-                    f"**ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ:** @{username}\n"
-                    f"**ᴄʜᴀᴛ ᴍᴇᴍʙᴇʀ ᴄᴏᴜɴᴛ:** {count}\n"
-                    f"**ᴀᴅᴅᴇᴅ ʙʏ:** {message.from_user.mention}"
+                    f"**Music bot added in a new group #New_Group**\n\n"
+                    f"**Chat name:** {message.chat.title}\n"
+                    f"**Chat ID:** {message.chat.id}\n"
+                    f"**Chat username:** @{username}\n"
+                    f"**Chat member count:** {count}\n"
+                    f"**Added by:** {message.from_user.mention}"
                 )
                 await app.send_message(
                     LOG_GROUP_ID,
@@ -44,7 +34,7 @@ async def join_watcher(_, message):
                         [
                             [
                                 InlineKeyboardButton(
-                                    f"ᴀᴅᴅᴇᴅ ʙʏ",
+                                    f"Add Me To Your Group",
                                     url=f"tg://openmessage?user_id={message.from_user.id}",
                                 )
                             ]
@@ -66,14 +56,14 @@ async def on_left_chat_member(_, message: Message):
         left_chat_member = message.left_chat_member
         if left_chat_member and left_chat_member.id == app.id:
             remove_by = (
-                message.from_user.mention if message.from_user else "𝐔ɴᴋɴᴏᴡɴ 𝐔sᴇʀ"
+                message.from_user.mention if message.from_user else "Unknown User"
             )
             title = message.chat.title
             username = (
-                f"@{message.chat.username}" if message.chat.username else "ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+                f"@{message.chat.username}" if message.chat.username else "Private Chat"
             )
             chat_id = message.chat.id
-            left = f"✫ <b><u>#Left_group</u></b> ✫\nᴄʜᴀᴛ ɴᴀᴍᴇ : {title}\nᴄʜᴀᴛ ɪᴅ : {chat_id}\n\nʀᴇᴍᴏᴠᴇᴅ ʙʏ : {remove_by}"
+            left = f"<b><u>#Left_group</u></b> ✫\Chat name : {title}\Chat ID : {chat_id}\n\nRemove by : {remove_by}"
             await app.send_message(LOG_GROUP_ID, text=left)
             await delete_served_chat(chat_id)
             await userbot.leave_chat(chat_id)
