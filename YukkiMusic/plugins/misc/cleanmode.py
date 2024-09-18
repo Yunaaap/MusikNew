@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 
 import asyncio
 from datetime import datetime, timedelta
@@ -283,7 +274,7 @@ async def auto_clean():
 asyncio.create_task(auto_clean())
 
 __MODULE__ = "Global"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 /broadcast [pesan atau balas ke pesan]"  >> Broadcast pesan ke chat yang dilayani bot.
 
 Mode Broadcasting:
@@ -294,4 +285,4 @@ Mode Broadcasting:
 -assistant >> Broadcast pesan kamu dari akun asisten bot.
 -nobot >> Paksa bot untuk gak broadcast pesan.
 
-Contoh:  /broadcast -user -assistant -pin Testing broadcast"""
+Contoh:  /broadcast -user -assistant -pin Testing broadcast</b></blockquote>"""
