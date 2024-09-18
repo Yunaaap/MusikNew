@@ -1,6 +1,8 @@
+from typing import Union
+
 from pyrogram.types import InlineKeyboardButton
 
-from config import OWNER_ID, SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 from YukkiMusic import app
 
 
@@ -33,22 +35,57 @@ def start_pannel(_):
     return buttons
 
 
-def private_panel(_):
+def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
-        [
-            InlineKeyboardButton(text="Support", url=f"{SUPPORT_CHANNEL}"),
-            InlineKeyboardButton(
-                text="Add Me!", url=f"https://t.me/{app.username}?startgroup=true"
-            ),
-            InlineKeyboardButton(text="Owner", url="https://t.me/Usern4meDoesNotExist404"),
-        ],
-        [
-            InlineKeyboardButton(text=_["S_B_8"], callback_data="settings_back_helper"),
-        ],
-        [
-            InlineKeyboardButton(text="close", callback_data=f"close"),
-        ],
+        [InlineKeyboardButton(text=_["S_B_8"], callback_data="settings_back_helper")]
     ]
+    if SUPPORT_CHANNEL and SUPPORT_GROUP:
+        buttons.append(
+            [
+                InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
+                InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
+            ]
+        )
+    else:
+        if SUPPORT_CHANNEL:
+            buttons.append(
+                [InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}")]
+            )
+        if SUPPORT_GROUP:
+            buttons.append(
+                [InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}")]
+            )
+    buttons.append(
+        [
+            InlineKeyboardButton(
+                text=_["S_B_5"],
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+            )
+        ]
+    )
+    if GITHUB_REPO and OWNER:
+        buttons.append(
+            [
+                InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
+                InlineKeyboardButton(text=_["S_B_6"], url=f"{GITHUB_REPO}"),
+            ]
+        )
+    else:
+
+        if GITHUB_REPO:
+            buttons.append(
+                [
+                    InlineKeyboardButton(text=_["S_B_6"], url=f"{GITHUB_REPO}"),
+                ]
+            )
+
+        if OWNER:
+            buttons.append(
+                [
+                    InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
+                ]
+            )
+    buttons.append([InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")])
     return buttons
 
 
@@ -56,7 +93,7 @@ def alive_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="Add Me!", url=f"https://t.me/{app.username}?startgroup=true"
+                text="Add Me To Your Group!", url=f"https://t.me/{app.username}?startgroup=true"
             ),
             InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
         ],
