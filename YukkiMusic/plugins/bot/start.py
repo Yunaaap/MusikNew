@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 import asyncio
 import time
 
@@ -209,10 +200,10 @@ async def start_comm(client, message: Message, _):
     else:
         try:
             await app.resolve_peer(OWNER_ID[0])
-            OWNER_ID = OWNER_ID[0]
+            OWNER = OWNER_ID[0]
         except:
-            OWNER_ID = None
-        out = private_panel(_, app.username, OWNER_ID)
+            OWNER = None
+        out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
                 await message.reply_photo(
