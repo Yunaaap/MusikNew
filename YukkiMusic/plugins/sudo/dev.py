@@ -1,16 +1,3 @@
-#
-# Copyright (C) 2024 by TheTeamVivek@Github, < https://github.com/TheTeamVivek >.
-#
-# This file is part of < https://github.com/TheTeamVivek/YukkiMusic > project,
-# and is released under the MIT License.
-# Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
-
-# This aeval and sh module is taken from < https://github.com/TheHamkerCat/WilliamButcherBot >
-# Credit goes to TheHamkerCat.
-#
 import os
 import re
 import subprocess
@@ -214,7 +201,7 @@ async def shellrunner(_, message: Message):
 
 
 __MODULE__ = "Owners"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 Add and Remove Sudo Users:
 
 /addsudo [Username or Reply to a user]
@@ -235,6 +222,5 @@ Bot Commands:
 /maintenance [enable / disable]
 /logger [enable / disable] - Bot logs the searched queries in logger group.
 /get_log [Number of Lines] - Get log of your bot from Heroku or VPS. Works for both.
-/autoend [enable|disable] - Enable Auto stream end after 3 mins if no one is listening.
-
+/autoend [enable|disable] - Enable Auto stream end after 3 mins if no one is listening.</b></blockquote>
 """
