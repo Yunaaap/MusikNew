@@ -209,10 +209,10 @@ async def start_comm(client, message: Message, _):
     else:
         try:
             await app.resolve_peer(OWNER_ID[0])
-            OWNER = OWNER_ID[0]
+            OWNER_ID = OWNER_ID[0]
         except:
-            OWNER = None
-        out = private_panel(_, app.username, OWNER)
+            OWNER_ID = None
+        out = private_panel(_, app.username, OWNER_ID)
         if config.START_IMG_URL:
             try:
                 await message.reply_photo(
