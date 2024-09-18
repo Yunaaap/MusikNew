@@ -40,7 +40,7 @@ def private_panel(_):
             InlineKeyboardButton(
                 text="Add Me!", url=f"https://t.me/{app.username}?startgroup=true"
             ),
-            InlineKeyboardButton(text="Owner", user_id=OWNER_ID),
+            InlineKeyboardButton(text="Owner", url="https://t.me/Usern4meDoesNotExist404"),
         ],
         [
             InlineKeyboardButton(text=_["S_B_8"], callback_data="settings_back_helper"),
