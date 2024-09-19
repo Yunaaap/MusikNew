@@ -9,13 +9,13 @@ load_dotenv()
 
 
 
-API_ID = int(getenv("API_ID", "20685926"))
-API_HASH = getenv("API_HASH", "f23de69c38e5c9ddb9c986fec6dcd1eb")
-BOT_TOKEN = getenv("BOT_TOKEN", "7261047669:AAEoajDoxrYKD3sXOb1g3p0V3eHJGR4Gp0k")
+API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH", "")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 MUST_JOIN = getenv("MUST_JOIN", "StreamSupport_Id")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://usrbot:usrbot4646@cluster0.6hroi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "")
 
 CLEANMODE_DELETE_MINS = int(
     getenv("CLEANMODE_MINS", "5")
@@ -56,7 +56,7 @@ SONG_DOWNLOAD_DURATION = int(
 
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002040303194"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 
 
 # Your User ID.
