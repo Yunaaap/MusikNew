@@ -12,6 +12,7 @@ load_dotenv()
 API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
+API_KEY = getenv("API_KEY", "539d3ecbc26d8be7519bb2c64b08da76") 
 MUST_JOIN = getenv("MUST_JOIN", "StreamSupport_Id")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
