@@ -5,7 +5,7 @@ from YukkiMusic import app
 
 #--------------------------
 
-MUST_JOIN = "ForwardRepeat"
+MUST_JOIN = "NevcTech"
 #------------------------
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(app: Client, msg: Message):
