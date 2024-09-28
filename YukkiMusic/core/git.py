@@ -80,6 +80,6 @@ def git():
     try:
         nrs.pull(config.UPSTREAM_BRANCH)
     except GitCommandError:
-            repo.git.reset("--hard", "FETCH_HEAD")
+        repo.git.reset("--hard", "FETCH_HEAD")
         install_req("pip3 install --no-cache-dir -r requirements.txt")
         LOGGER(__name__).info(f"Fetching updates from upstream repository...")
