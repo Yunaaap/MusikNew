@@ -13,7 +13,7 @@ API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 API_KEY = getenv("API_KEY", "539d3ecbc26d8be7519bb2c64b08da76") 
-MUST_JOIN = getenv("MUST_JOIN", "StreamSupport_Id")
+MUST_JOIN = getenv("MUST_JOIN", "TemanOnline_Id")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
@@ -99,7 +99,7 @@ SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/NevcTech"
 )  # Example:- https://t.me/TheTeamVivek
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/StreamSupport_Id"
+    "SUPPORT_GROUP", "https://t.me/TemanOnline_Id"
 )  # Example:- https://t.me/TheTeamVk
 
 
