@@ -13,8 +13,7 @@ pillow==9.5.0
 psutil
 wget
 pytube
-py-tgcalls==1.2.9
-ntgcalls==1.1.2
+py-tgcalls==2.0.2
 python-dotenv
 pyyaml
 requests
@@ -26,6 +25,6 @@ httpx
 git+https://github.com/yt-dlp/yt-dlp@master
 git+https://github.com/alexmercerind/youtube-search-python@main
 git+https://github.com/joetats/youtube_search@master
-git+https://github.com/naya1503/mypyrogram@dev
+git+https://github.com/KurimuzonAkuma/pyrogram@dev
 croniter
 tornado
