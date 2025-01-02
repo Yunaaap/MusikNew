@@ -13,7 +13,7 @@ API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 API_KEY = getenv("API_KEY", "539d3ecbc26d8be7519bb2c64b08da76") 
-MUST_JOIN = getenv("MUST_JOIN", "NevcTech")
+MUST_JOIN = getenv("MUST_JOIN", "SharingBersamaYok")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
@@ -40,7 +40,7 @@ EXTRA_PLUGINS = getenv(
 
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
-    "https://github.com/Vooyage21/plugin.git",
+    "https://github.com/",
 )
 # Fill here the external plugins repo where plugins that you want to load
 
@@ -83,7 +83,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Vooyage21/MusicPlayer",
+    "https://github.com/",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -96,10 +96,10 @@ GIT_TOKEN = getenv(
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/NaySupportMusic"
+    "SUPPORT_CHANNEL", "https://t.me/SharingBersamaYok
 )  # Example:- https://t.me/TheTeamVivek
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/NaySupportMusic"
+    "SUPPORT_GROUP", "https://t.me/SharingBersamaYok
 )  # Example:- https://t.me/TheTeamVk
 
 
